@@ -1,0 +1,19 @@
+name: Terraform CI-CD
+on:
+  push:
+    branches:
+      - main
+jobs:
+  terraform-ci-cd:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download repo and cd to the repo folder
+      uses: actions/checkout@v2
+    - name: Configure AWS credentials from Test account
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        # Hands-on 1: Replace this with your role
+        role-to-assume: arn:aws:iam::398023770855:role/deployment-role
+        aws-region: us-east-1
+    - name: test aws access
+      run: aws sts get-caller-identity
