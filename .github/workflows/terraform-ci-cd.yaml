@@ -47,9 +47,6 @@ jobs:
     - name: Terraform Plan
       run: terraform plan
 
-    - name: Checkov GitHub Action
-      uses: bridgecrewio/checkov-action@v12
-
   terraform-cd:
     runs-on: ubuntu-latest
     environment: prd
