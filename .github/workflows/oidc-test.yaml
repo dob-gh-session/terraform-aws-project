@@ -5,7 +5,7 @@ on:
   push:
 
 jobs:
-  terraform-ci-cd:
+  oidc-test:
     runs-on: ubuntu-latest
     # These permissions are needed to interact with GitHub's OIDC Token endpoint.
     permissions:
@@ -21,7 +21,7 @@ jobs:
     - name: Configure AWS credentials from Test account
       uses: aws-actions/configure-aws-credentials@v4
       with:
-        # Hands-on 1: Replace this with your role, elgama
+        # Hands-on 1: Replace this with your OIDC role, elgama
         role-to-assume: arn:aws:iam::398023770855:role/deployment-role
         aws-region: us-east-1
 

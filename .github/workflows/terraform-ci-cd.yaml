@@ -1,7 +1,7 @@
 name: Terraform CI-CD
 on:
   workflow_dispatch:
-## TODO: Hands-on 2: uncomment the following 3 lines to trigger for push on main
+## TODO: Hands-on 3: uncomment the following 3 lines to trigger for push on main
 #  push:
 #    branches:
 #      - main
@@ -24,11 +24,11 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
-        # Hands-on 2: Replace this with your role, elgama
+        # Hands-on 3: Replace this with your OIDC role, elgama
         role-to-assume: arn:aws:iam::398023770855:role/deployment-role
         aws-region: us-east-1
 
-    ## TODO: Hands-on 2: Add a step to Setup terraform on the GitHub Runner using this action https://github.com/hashicorp/setup-terraform
+    ## TODO: Hands-on 3: Add a step to Setup terraform on the GitHub Runner using this action https://github.com/hashicorp/setup-terraform
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v2
       with:
@@ -65,11 +65,11 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
-        # Hands-on 2: Replace this with your role, elgama
+        # Hands-on 3: Replace this with your OIDC role, elgama
         role-to-assume: arn:aws:iam::398023770855:role/deployment-role
         aws-region: us-east-1
 
-    ## TODO: Hands-on 2: Add a step to Setup terraform on the GitHub Runner using this action https://github.com/hashicorp/setup-terraform
+    ## TODO: Hands-on 3: Add a step to Setup terraform on the GitHub Runner using this action https://github.com/hashicorp/setup-terraform
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v2
       with:
