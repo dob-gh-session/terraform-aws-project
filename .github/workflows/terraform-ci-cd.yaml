@@ -2,9 +2,9 @@ name: Terraform CI-CD
 on:
   workflow_dispatch:
 ## TODO: Hands-on 3: uncomment the following 3 lines to trigger for push on main
-#  push:
-#    branches:
-#      - main
+  push:
+    branches:
+      - main
 
 # These permissions are needed to interact with GitHub's OIDC Token endpoint.
 permissions:

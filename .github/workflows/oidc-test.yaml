@@ -3,6 +3,8 @@ name: OIDC test action
 # trigger on every push
 on:
   push:
+    branches:
+    - main
 
 jobs:
   oidc-test:
