@@ -28,3 +28,4 @@ jobs:
     # This is a simple test to make sure that we were logged in successfully
     - name: test aws access
       run: aws sts get-caller-identity
+
